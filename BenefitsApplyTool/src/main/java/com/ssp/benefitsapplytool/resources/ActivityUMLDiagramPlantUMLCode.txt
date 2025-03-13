@@ -1,0 +1,83 @@
+@startuml
+start
+
+:Create Participant with mandatory Date of Birth;
+:Assign Registration Date (System Generated);
+
+if (First Name Provided?) then (Yes)
+    :Validate First Name;
+    if (Valid?) then (Yes)
+        :Set Active First Name;
+        :Add to First Name History;
+    else (No)
+        :Prompt for Valid First Name;
+    endif
+else (No)
+    :Prompt for First Name;
+endif
+
+if (Surname Provided?) then (Yes)
+    :Validate Surname;
+    if (Valid?) then (Yes)
+        :Set Active Surname;
+        :Add to Surname History;
+    else (No)
+        :Prompt for Valid Surname;
+    endif
+else (No)
+    :Prompt for Surname;
+endif
+
+if (Primary Address Provided?) then (Yes)
+    :Validate Primary Address (UK postcode);
+    if (Valid?) then (Yes)
+        :Set Active Address;
+        :Add to Address History;
+    else (No)
+        :Prompt for Valid Address;
+    endif
+else (No)
+    :Prompt for Address;
+endif
+
+if (Primary Bank Account Provided?) then (Yes)
+    :Validate Bank Account;
+    if (Valid?) then (Yes)
+        :Set Active Bank Account;
+        :Add to Bank Account History;
+    else (No)
+        :Prompt for Valid Bank Account;
+    endif
+else (No)
+    :Prompt for Bank Account;
+endif
+
+if (National Insurance Number Provided?) then (Yes)
+    :Set National Insurance Number (NINO);
+    :Remove Prospect Status (if applicable);
+else (No)
+    :Set as Prospect;
+endif
+
+if (Telephone Provided?) then (Yes)
+    :Validate Telephone;
+    if (Valid?) then (Yes)
+        :Set Telephone Number;
+    else (No)
+        :Prompt for Valid Telephone;
+    endif
+endif
+
+if (Email Provided?) then (Yes)
+    :Validate Email Address;
+    if (Valid?) then (Yes)
+        :Set Email Address;
+    else (No)
+        :Prompt for Valid Email;
+    endif
+endif
+
+:Complete Participant Registration;
+
+stop
+@enduml

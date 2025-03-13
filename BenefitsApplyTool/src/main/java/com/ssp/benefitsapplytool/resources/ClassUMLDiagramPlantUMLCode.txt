@@ -1,0 +1,91 @@
+@startuml
+class Participant {
+    - LocalDate registrationDate
+    - NationalInsuranceNumber nationalInsuranceNumber
+    - LocalDate dateOfBirth
+    - String primaryTelephone
+    - String primaryEmail
+    - List<FirstNameEvidence> firstNameHistory
+    - List<SurnameEvidence> surnameHistory
+    - List<AddressEvidence> addressHistory
+    - List<BankAccountEvidence> bankAccountHistory
+    - boolean validateDateOfBirth()
+    - boolean validateTelephone()
+    - boolean validateEmail()
+    - boolean validateName()
+    - boolean validateAddress()
+    - boolean validateBankAccount()
+
+    + Participant(LocalDate dateOfBirth, String firstName, String surname, String primaryAddress, String bankAccount, String nationalInsuranceNumber, String primaryTelephone, String primaryEmail)
+    + LocalDate getRegistrationDate()
+    + int getAge()
+    + String getActiveFirstName()
+    + String getActiveSurname()
+    + String getActiveAddress()
+    + String getActiveBankAccount()
+    + void setDateOfBirth()
+    + void setPrimaryTelephone()
+    + void setPrimaryEmail()
+    + boolean isProspect()
+    + void setNationalInsuranceNumber(String nino)
+    + String getNationalInsuranceNumber()
+    + void addNameToHistoryAndSetAsActive(String firstName, String surname)
+    + void addAddressToHistoryAndSetAsActive(String address)
+    + void addBankAccountToHistoryAndSetAsActive(String accountNumber)
+}
+
+class NationalInsuranceNumber {
+    - String number
+
+    + NationalInsuranceNumber(String number)
+    + boolean isProspect()
+    + String getNumber()
+    + void setNumber(String number)
+}
+
+abstract class Evidence {
+    - LocalDate createdOn
+
+    + Evidence()
+    + LocalDate getCreatedOn()
+}
+
+class FirstNameEvidence {
+    - String firstName
+
+    + FirstNameEvidence(String firstName)
+    + String getFirstName()
+}
+
+class SurnameEvidence {
+    - String surname
+
+    + SurnameEvidence(String surname)
+    + String getSurname()
+}
+
+class AddressEvidence {
+    - String address
+
+    + AddressEvidence(String address)
+    + String getAddress()
+}
+
+class BankAccountEvidence {
+    - String accountNumber
+
+    + BankAccountEvidence(String accountNumber)
+    + String getAccountNumber()
+}
+
+Participant --> NationalInsuranceNumber
+Participant "1" --> "*" Evidence
+Participant "1" --> "*" FirstNameEvidence
+Participant "1" --> "*" SurnameEvidence
+Participant "1" --> "*" AddressEvidence
+Participant "1" --> "*" BankAccountEvidence
+FirstNameEvidence --|> Evidence
+SurnameEvidence --|> Evidence
+AddressEvidence --|> Evidence
+BankAccountEvidence --|> Evidence
+@enduml

@@ -1,0 +1,8 @@
+com\ssp\benefitsapplytool\model\BankAccountEvidence.class
+com\ssp\benefitsapplytool\model\AddressEvidence.class
+com\ssp\benefitsapplytool\model\SurnameEvidence.class
+com\ssp\benefitsapplytool\model\FirstNameEvidence.class
+com\ssp\benefitsapplytool\BenefitsApplyTool.class
+com\ssp\benefitsapplytool\model\Evidence.class
+com\ssp\benefitsapplytool\model\NationalInsuranceNumber.class
+com\ssp\benefitsapplytool\model\Participant.class
