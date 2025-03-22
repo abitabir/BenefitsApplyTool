@@ -34,6 +34,6 @@ public class NationalInsuranceNumber {
 
     public void setNumber(String number) {
         this.number = number;
-        this.isProspect = false;
+        this.isProspect = number == null;
     }
 }

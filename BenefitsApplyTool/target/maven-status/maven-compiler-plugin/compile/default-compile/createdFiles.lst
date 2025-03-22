@@ -1,4 +1,5 @@
 com\ssp\benefitsapplytool\model\BankAccountEvidence.class
+com\ssp\benefitsapplytool\view\ParticipantView.class
 com\ssp\benefitsapplytool\model\AddressEvidence.class
 com\ssp\benefitsapplytool\model\SurnameEvidence.class
 com\ssp\benefitsapplytool\model\FirstNameEvidence.class

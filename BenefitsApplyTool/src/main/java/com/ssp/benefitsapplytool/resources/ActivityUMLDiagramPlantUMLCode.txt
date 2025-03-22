@@ -1,80 +1,101 @@
 @startuml
 start
 
-:Create Participant with mandatory Date of Birth;
+:Create Participant;
 :Assign Registration Date (System Generated);
 
-if (First Name Provided?) then (Yes)
-    :Validate First Name;
-    if (Valid?) then (Yes)
-        :Set Active First Name;
-        :Add to First Name History;
-    else (No)
-        :Prompt for Valid First Name;
-    endif
-else (No)
+' Mandatory fields
+:Prompt for Date of Birth;
+while (Date of Birth Provided? == No)
+    :Prompt for Date of Birth;
+endwhile
+:Validate Date of Birth;
+while (Valid? == No)
+    :Prompt for Valid Date of Birth;
+    :Validate Date of Birth;
+endwhile
+:Set Date of Birth;
+
+:Prompt for First Name;
+while (First Name Provided? == No)
     :Prompt for First Name;
-endif
+endwhile
+:Validate First Name;
+while (Valid? == No)
+    :Prompt for Valid First Name;
+    :Validate First Name;
+endwhile
+:Set Active First Name;
+:Add to First Name History;
 
-if (Surname Provided?) then (Yes)
-    :Validate Surname;
-    if (Valid?) then (Yes)
-        :Set Active Surname;
-        :Add to Surname History;
-    else (No)
-        :Prompt for Valid Surname;
-    endif
-else (No)
+:Prompt for Surname;
+while (Surname Provided? == No)
     :Prompt for Surname;
-endif
+endwhile
+:Validate Surname;
+while (Valid? == No)
+    :Prompt for Valid Surname;
+    :Validate Surname;
+endwhile
+:Set Active Surname;
+:Add to Surname History;
 
-if (Primary Address Provided?) then (Yes)
+:Prompt for Primary Address;
+while (Primary Address Provided? == No)
+    :Prompt for Primary Address;
+endwhile
+:Validate Primary Address (UK postcode);
+while (Valid? == No)
+    :Prompt for Valid Address;
     :Validate Primary Address (UK postcode);
-    if (Valid?) then (Yes)
-        :Set Active Address;
-        :Add to Address History;
-    else (No)
-        :Prompt for Valid Address;
-    endif
-else (No)
-    :Prompt for Address;
-endif
+endwhile
+:Set Active Address;
+:Add to Address History;
 
-if (Primary Bank Account Provided?) then (Yes)
-    :Validate Bank Account;
-    if (Valid?) then (Yes)
-        :Set Active Bank Account;
-        :Add to Bank Account History;
-    else (No)
-        :Prompt for Valid Bank Account;
-    endif
-else (No)
+:Prompt for Bank Account;
+while (Primary Bank Account Provided? == No)
     :Prompt for Bank Account;
-endif
+endwhile
+:Validate Bank Account;
+while (Valid? == No)
+    :Prompt for Valid Bank Account;
+    :Validate Bank Account;
+endwhile
+:Set Active Bank Account;
+:Add to Bank Account History;
 
+' Optional fields
+:Prompt for National Insurance Number;
 if (National Insurance Number Provided?) then (Yes)
-    :Set National Insurance Number (NINO);
-    :Remove Prospect Status (if applicable);
+    :Validate National Insurance Number;
+    while (Valid? == No)
+        :Prompt for Valid National Insurance Number;
+        :Validate National Insurance Number;
+    endwhile
+        :Set National Insurance Number (NINO);
+        :Remove Prospect Status (if applicable);
 else (No)
     :Set as Prospect;
 endif
 
-if (Telephone Provided?) then (Yes)
-    :Validate Telephone;
-    if (Valid?) then (Yes)
-        :Set Telephone Number;
-    else (No)
-        :Prompt for Valid Telephone;
-    endif
+:Prompt for Telephone Number;
+if (Telephone Number Provided?) then (Yes)
+    :Validate Telephone Number;
+    while (Valid? == No)
+        :Prompt for Valid Telephone Number;
+        :Validate Telephone Number;
+    endwhile
+    :Set Telephone Number;
 endif
 
-if (Email Provided?) then (Yes)
+:Prompt for Email Address;
+if (Email Address Provided?) then (Yes)
     :Validate Email Address;
-    if (Valid?) then (Yes)
-        :Set Email Address;
-    else (No)
-        :Prompt for Valid Email;
-    endif
+    while (Valid? == No)
+        :Prompt for Valid Email Address;
+        :Validate Email Address;
+    endwhile
+    :Set Email Address;
 endif
 
 :Complete Participant Registration;

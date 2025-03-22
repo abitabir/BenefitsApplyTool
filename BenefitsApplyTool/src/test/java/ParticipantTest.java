@@ -4,7 +4,6 @@
  */
 
 import com.ssp.benefitsapplytool.model.Participant;
-import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -16,8 +15,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-
-import static org.junit.jupiter.api.Assertions.*;
+import java.time.Period;
 
 class ParticipantTest {
 
@@ -26,6 +24,7 @@ class ParticipantTest {
     @BeforeEach
     void setup() {
         participant = new Participant(
+                LocalDate.now(),
                 LocalDate.of(1990, 5, 15),
                 "John",
                 "Doe",
@@ -56,7 +55,8 @@ class ParticipantTest {
 
     @Test
     void testGetAge() {
-        int expectedAge = LocalDate.now().getYear() - 1990;
+        
+        int expectedAge = Period.between(LocalDate.of(1990, 5, 15), LocalDate.now()).getYears();
         assertEquals(expectedAge, participant.getAge());
     }
 
@@ -64,19 +64,19 @@ class ParticipantTest {
     void testSetDateOfBirth() {
         LocalDate newDOB = LocalDate.of(1995, 3, 10);
         participant.setDateOfBirth(newDOB);
-        assertEquals(newDOB, participant.getRegistrationDate());
+        assertEquals(newDOB, participant.getDateOfBirth());
     }
 
     @Test
     void testSetPrimaryTelephone() {
         participant.setPrimaryTelephone("07234567890");
-        assertEquals("07234567890", participant.getActiveBankAccount());
+        assertEquals("07234567890", participant.getPrimaryTelephone());
     }
 
     @Test
     void testSetPrimaryEmail() {
         participant.setPrimaryEmail("new.email@example.com");
-        assertEquals("new.email@example.com", participant.getActiveBankAccount());
+        assertEquals("new.email@example.com", participant.getPrimaryEmail());
     }
 
     @Test
@@ -85,8 +85,8 @@ class ParticipantTest {
         assertEquals("Jack", participant.getActiveFirstName());
 
         // Check if previous value is preserved in the history (indirectly)
-        participant.addFirstNameToHistoryAndSetAsActive("Alex");
-        assertEquals("Alex", participant.getActiveFirstName());
+        participant.addFirstNameToHistoryAndSetAsActive("Alfred");
+        assertEquals("Alfred", participant.getActiveFirstName());
     }
 
     @Test

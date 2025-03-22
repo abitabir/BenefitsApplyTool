@@ -7,7 +7,6 @@ import com.ssp.benefitsapplytool.model.AddressEvidence;
 import com.ssp.benefitsapplytool.model.BankAccountEvidence;
 import com.ssp.benefitsapplytool.model.FirstNameEvidence;
 import com.ssp.benefitsapplytool.model.SurnameEvidence;
-import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -18,8 +17,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class EvidenceTest {
 

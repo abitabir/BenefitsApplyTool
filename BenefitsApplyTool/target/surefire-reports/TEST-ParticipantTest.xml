@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ParticipantTest" time="0.207" tests="13" errors="0" skipped="0" failures="5">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ParticipantTest" time="0.173" tests="13" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="GB"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\OpenLogic\jdk-17.0.12.7-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\khali\AppData\Local\Temp\surefire4735152352094756511\surefirebooter-20250313092017019_3.jar C:\Users\khali\AppData\Local\Temp\surefire4735152352094756511 2025-03-13T09-20-16_692-jvmRun1 surefire-20250313092017019_1tmp surefire_0-20250313092017019_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\khali\AppData\Local\Temp\surefire13658484947806412777\surefirebooter-20250322150320889_3.jar C:\Users\khali\AppData\Local\Temp\surefire13658484947806412777 2025-03-22T15-03-20_514-jvmRun1 surefire-20250322150320889_1tmp surefire_0-20250322150320889_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="ParticipantTest"/>
     <property name="surefire.test.class.path" value="C:\Users\khali\Documents\NetBeansProjects\BenefitsApplyTool\target\test-classes;C:\Users\khali\Documents\NetBeansProjects\BenefitsApplyTool\target\classes;C:\Users\khali\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\khali\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\khali\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\khali\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\khali\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\khali\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\khali\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\khali\AppData\Local\Temp\surefire4735152352094756511\surefirebooter-20250313092017019_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\khali\AppData\Local\Temp\surefire13658484947806412777\surefirebooter-20250322150320889_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+7-adhoc..jdk17u"/>
@@ -59,81 +59,16 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testSetProspectStatus" classname="ParticipantTest" time="0.082">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ParticipantTest.testSetProspectStatus(ParticipantTest.java:128)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testAddAddressEvidence" classname="ParticipantTest" time="0.005"/>
-  <testcase name="testAddSurnameEvidence" classname="ParticipantTest" time="0.003"/>
-  <testcase name="testSetAndGetNationalInsuranceNumber" classname="ParticipantTest" time="0.001"/>
+  <testcase name="testSetProspectStatus" classname="ParticipantTest" time="0.075"/>
+  <testcase name="testAddAddressEvidence" classname="ParticipantTest" time="0.004"/>
+  <testcase name="testAddSurnameEvidence" classname="ParticipantTest" time="0.002"/>
+  <testcase name="testSetAndGetNationalInsuranceNumber" classname="ParticipantTest" time="0.002"/>
   <testcase name="testAddBankAccountEvidence" classname="ParticipantTest" time="0.001"/>
-  <testcase name="testAddFirstNameEvidence" classname="ParticipantTest" time="0.002"/>
-  <testcase name="testSetDateOfBirth" classname="ParticipantTest" time="0.003">
-    <failure message="expected: &lt;1995-03-10&gt; but was: &lt;2025-03-13&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1995-03-10> but was: <2025-03-13>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ParticipantTest.testSetDateOfBirth(ParticipantTest.java:67)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testSetPrimaryTelephone" classname="ParticipantTest" time="0.004">
-    <failure message="expected: &lt;07234567890&gt; but was: &lt;12345678&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <07234567890> but was: <12345678>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ParticipantTest.testSetPrimaryTelephone(ParticipantTest.java:73)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testSetPrimaryEmail" classname="ParticipantTest" time="0.005">
-    <failure message="expected: &lt;new.email@example.com&gt; but was: &lt;12345678&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <new.email@example.com> but was: <12345678>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ParticipantTest.testSetPrimaryEmail(ParticipantTest.java:79)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetAge" classname="ParticipantTest" time="0.006">
-    <failure message="expected: &lt;35&gt; but was: &lt;34&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <35> but was: <34>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ParticipantTest.testGetAge(ParticipantTest.java:60)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
+  <testcase name="testAddFirstNameEvidence" classname="ParticipantTest" time="0.003"/>
+  <testcase name="testSetDateOfBirth" classname="ParticipantTest" time="0.001"/>
+  <testcase name="testSetPrimaryTelephone" classname="ParticipantTest" time="0.002"/>
+  <testcase name="testSetPrimaryEmail" classname="ParticipantTest" time="0.002"/>
+  <testcase name="testGetAge" classname="ParticipantTest" time="0.001"/>
   <testcase name="testValidationFailsWithInvalidTelephone" classname="ParticipantTest" time="0.006"/>
   <testcase name="testValidationFailsWithInvalidEmail" classname="ParticipantTest" time="0.002"/>
   <testcase name="testConstructor" classname="ParticipantTest" time="0.002"/>
